@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
-
+        mWordViewModel = new ViewModelProvider(this).get(WordViewModel.class);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.setWords(words);
             }
         });
-        mWordViewModel = new ViewModelProvider(this).get(WordViewModel.class);
+
         ItemTouchHelper helper = new ItemTouchHelper(
                 new ItemTouchHelper.SimpleCallback(0,
                         ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
