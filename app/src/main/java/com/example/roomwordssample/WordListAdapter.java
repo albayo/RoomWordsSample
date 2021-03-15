@@ -57,5 +57,8 @@ public class  WordListAdapter  extends
             wordItemView = itemView.findViewById(R.id.textView);
         }
     }
+    public Word getWordAtPosition (int position) {
+        return mWords.get(position);
+    }
 }
 // getItemCount﴾﴿ is called many time
